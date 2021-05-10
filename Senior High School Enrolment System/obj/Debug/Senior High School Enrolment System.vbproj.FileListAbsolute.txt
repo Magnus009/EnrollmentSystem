@@ -1,0 +1,145 @@
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe.config
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.pdb
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.xml
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.Resources.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbproj.GenerateResource.Cache
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.exe
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.xml
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.pdb
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_activitylog.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_login.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_main.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addstud.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_coursecard.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_regform.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_masterlist.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_createacc.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_forgotpass.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_viewaccounts.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_viewstudrecords.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_add_drop.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_evaluate.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addschoolyear.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_setschoolyear.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addsection.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addsubjects.resources
+C:\Users\jerem\Desktop\System Sec Proj\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_editsubjects.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe.config
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.exe
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.xml
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.pdb
+D:\thesis\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe
+D:\thesis\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.pdb
+D:\thesis\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.xml
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_activitylog.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addschoolyear.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addsection.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addstud.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addsubjects.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addteacher.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_add_drop.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_coursecard.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_createacc.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_editsubjects.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_evaluate.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_forgotpass.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_login.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_main.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_masterlist.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_regform.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_setschoolyear.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_viewaccounts.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_viewstudrecords.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_viewteachers.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.Resources.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbproj.GenerateResource.Cache
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addschedulecode.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addgrades.resources
+D:\thesis\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addgrade_iireg.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe.config
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.pdb
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.xml
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddStrand.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AssignSection.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AssignStudents.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AuditTrail.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddSchedule.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addschoolyear.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_dashboard.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_GradingSections.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_GradingTeacher.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_IrregAssignSection.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_IrregSchedule.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Section.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddStudent.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddSubjects.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddTeacher.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_coursecard.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_CreateAccount.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_SH1Report.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_SH1_Print.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_StudentGrading.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewSection.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewStrands.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewSubjectRecords.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ForgotPass.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Login.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_TeacherRecords.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.mdiSES.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_regform.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_setschoolyear.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Accounts.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_StudentRecords.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.Resources.resources
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbproj.GenerateResource.Cache
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\RdlCompile.cache
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\RdlCompile.compiled
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.exe
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.xml
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.pdb
+C:\Users\jerem\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbprojResolveAssemblyReference.cache
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe.config
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.exe
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.xml
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.pdb
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbprojResolveAssemblyReference.cache
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddStrand.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AssignSection.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AssignStudents.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AuditTrail.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddSchedule.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_addschoolyear.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_dashboard.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_GradingSections.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_GradingTeacher.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_IrregAssignSection.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_IrregSchedule.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Section.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddStudent.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddSubjects.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_AddTeacher.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_coursecard.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_CreateAccount.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_SH1Report.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_SH1_Print.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_StudentGrading.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewSection.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewStrands.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ViewSubjectRecords.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_ForgotPass.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Login.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_TeacherRecords.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.mdiSES.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_regform.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_setschoolyear.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_Accounts.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.frm_StudentRecords.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior_High_School_Enrolment_System.Resources.resources
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\Senior High School Enrolment System.vbproj.GenerateResource.Cache
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\RdlCompile.cache
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\obj\Debug\RdlCompile.compiled
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.exe
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.pdb
+C:\Users\63997\Desktop\enrolment_system\Senior High School Enrolment System\bin\Debug\Senior High School Enrolment System.xml
