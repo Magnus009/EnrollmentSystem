@@ -37,7 +37,7 @@ Partial Class frm_AddStrand
         '
         Me.lblStrandCode.AutoSize = True
         Me.lblStrandCode.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStrandCode.Location = New System.Drawing.Point(21, 45)
+        Me.lblStrandCode.Location = New System.Drawing.Point(19, 20)
         Me.lblStrandCode.Name = "lblStrandCode"
         Me.lblStrandCode.Size = New System.Drawing.Size(99, 16)
         Me.lblStrandCode.TabIndex = 0
@@ -47,7 +47,7 @@ Partial Class frm_AddStrand
         '
         Me.txtStrandCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtStrandCode.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStrandCode.Location = New System.Drawing.Point(126, 44)
+        Me.txtStrandCode.Location = New System.Drawing.Point(122, 19)
         Me.txtStrandCode.MaxLength = 12
         Me.txtStrandCode.Name = "txtStrandCode"
         Me.txtStrandCode.Size = New System.Drawing.Size(165, 23)
@@ -57,7 +57,7 @@ Partial Class frm_AddStrand
         '
         Me.txtStrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtStrandName.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStrandName.Location = New System.Drawing.Point(126, 82)
+        Me.txtStrandName.Location = New System.Drawing.Point(122, 48)
         Me.txtStrandName.MaxLength = 50
         Me.txtStrandName.Name = "txtStrandName"
         Me.txtStrandName.Size = New System.Drawing.Size(292, 23)
@@ -67,7 +67,7 @@ Partial Class frm_AddStrand
         '
         Me.lblStrandName.AutoSize = True
         Me.lblStrandName.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStrandName.Location = New System.Drawing.Point(21, 83)
+        Me.lblStrandName.Location = New System.Drawing.Point(17, 49)
         Me.lblStrandName.Name = "lblStrandName"
         Me.lblStrandName.Size = New System.Drawing.Size(101, 16)
         Me.lblStrandName.TabIndex = 2
@@ -77,7 +77,7 @@ Partial Class frm_AddStrand
         '
         Me.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDescription.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescription.Location = New System.Drawing.Point(126, 123)
+        Me.txtDescription.Location = New System.Drawing.Point(122, 78)
         Me.txtDescription.MaxLength = 50
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
@@ -88,7 +88,7 @@ Partial Class frm_AddStrand
         '
         Me.lblDescription.AutoSize = True
         Me.lblDescription.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescription.Location = New System.Drawing.Point(21, 124)
+        Me.lblDescription.Location = New System.Drawing.Point(27, 79)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(91, 16)
         Me.lblDescription.TabIndex = 4
@@ -98,7 +98,7 @@ Partial Class frm_AddStrand
         '
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(110, 201)
+        Me.btnAdd.Location = New System.Drawing.Point(117, 147)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(93, 37)
         Me.btnAdd.TabIndex = 6
@@ -109,7 +109,7 @@ Partial Class frm_AddStrand
         '
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(212, 201)
+        Me.btnCancel.Location = New System.Drawing.Point(213, 147)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(93, 37)
         Me.btnCancel.TabIndex = 7
@@ -120,7 +120,7 @@ Partial Class frm_AddStrand
         '
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.Location = New System.Drawing.Point(110, 201)
+        Me.btnUpdate.Location = New System.Drawing.Point(117, 147)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(93, 37)
         Me.btnUpdate.TabIndex = 8
@@ -132,7 +132,7 @@ Partial Class frm_AddStrand
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(430, 261)
+        Me.ClientSize = New System.Drawing.Size(428, 195)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)

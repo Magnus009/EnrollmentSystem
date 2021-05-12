@@ -23,141 +23,125 @@
     End Sub
 
     Private Sub getSubject()
-        Dim rsSubject As New ADODB.Recordset
+        Dim dtSubjects As New DataTable
 
-        Call SQLConnect()
-        strSQL = vbNullString
-        strSQL &= "SELECT * FROM Subject"
-        rsSubject.Open(strSQL, conDB, 1, 4)
+        strSQL = "SELECT * FROM Subject"
 
-        Do While rsSubject.EOF = False
+        For Each row As DataRow In dtSubjects.Rows
             With chklstPrerequisite
-                .Items.Add(rsSubject.Fields(1).Value, False)
+                .Items.Add(row.Item("Description"), False)
             End With
-
-            rsSubject.MoveNext()
-        Loop
-        
-
+        Next
     End Sub
 
     Public Sub getSubjectType()
-        Dim rsType As New ADODB.Recordset
-
-        strSQL = vbNullString
-        strSQL &= "SELECT Description FROM SubjectType"
-        rsType.Open(strSQL, conDB, 1, 4)
-
-        For i = 1 To rsType.RecordCount
-            cboType.Items.Add(rsType.Fields(0).Value)
-
-            rsType.MoveNext()
-        Next
+        strSQL = "SELECT TypeCode, Description FROM SubjectType"
+        cboDataBind(cboType, strSQL)
 
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim rsInsertSub As New ADODB.Recordset
-        Dim rsInserPre As New ADODB.Recordset
-        Dim rsCheck As New ADODB.Recordset
+        Dim intCheck As Integer
+        Dim blnResult As Boolean
+        Try
+            If MsgBox("Are you sure you want to register?", vbYesNo, vbQuestion) = vbYes Then
 
-        If MsgBox("Are you sure you want to register?", vbYesNo, vbQuestion) = vbYes Then
+                Call SQLConnect()
 
-            Call SQLConnect()
+                strSQL = "SELECT count(*) FROM Subject" & vbCrLf
+                strSQL &= "WHERE SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
+                intCheck = SELECT_SHS(strSQL).Rows(0)(0)
 
-            strSQL = vbNullString
-            strSQL &= "SELECT * FROM Subject" & vbCrLf
-            strSQL &= "WHERE SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
-            rsCheck.Open(strSQL, conDB, 1, 4)
+                If intCheck <> 0 Then
+                    MsgBox("Subject Code already exist!", vbExclamation)
+                Else
+                    strSQL = "INSERT INTO Subject " & vbCrLf
+                    strSQL &= "VALUES (" & vbCrLf
+                    strSQL &= "'" & txtSubCode.Text & "'" & vbCrLf
+                    strSQL &= ",'" & txtSubDescription.Text & "'" & vbCrLf
+                    strSQL &= ",'" & txtUnit.Text & "'" & vbCrLf
+                    strSQL &= ",'" & getSubjectTypeCode(cboType.Text) & "'" & vbCrLf
+                    strSQL &= ",getdate()" & vbCrLf
+                    strSQL &= ",Null" & vbCrLf
+                    strSQL &= ",getdate()" & vbCrLf
+                    strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+                    blnResult = EXEC_SHS(strSQL)
 
-            If rsCheck.EOF = False Then
-                MsgBox("Subject Code already exist!", vbExclamation)
-            Else
-                strSQL = vbNullString
-                strSQL &= "INSERT INTO Subject " & vbCrLf
-                strSQL &= "VALUES (" & vbCrLf
-                strSQL &= "'" & txtSubCode.Text & "'" & vbCrLf
-                strSQL &= ",'" & txtSubDescription.Text & "'" & vbCrLf
-                strSQL &= ",'" & txtUnit.Text & "'" & vbCrLf
-                strSQL &= ",'" & getSubjectTypeCode(cboType.Text) & "'" & vbCrLf
-                strSQL &= ",getdate()" & vbCrLf
-                strSQL &= ",Null" & vbCrLf
-                strSQL &= ",getdate()" & vbCrLf
-                strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
-                rsInsertSub.Open(strSQL, conDB, 1, 4)
+                    If chklstPrerequisite.CheckedItems.Count <> 0 Then
+                        For i = 0 To chklstPrerequisite.CheckedItems.Count - 1
 
+                            strSQL = vbNullString
+                            strSQL &= "INSERT INTO SubjectRelation " & vbCrLf
+                            strSQL &= "VALUES (" & vbCrLf
+                            strSQL &= "'" & txtSubCode.Text & "'" & vbCrLf
+                            strSQL &= ",'" & getSubjectCode(chklstPrerequisite.CheckedItems(i)) & "'" & vbCrLf
+                            strSQL &= ",getdate()" & vbCrLf
+                            strSQL &= ",Null" & vbCrLf
+                            strSQL &= ",getdate()" & vbCrLf
+                            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+                            blnResult = EXEC_SHS(strSQL)
+                        Next
+                    End If
 
-                If chklstPrerequisite.CheckedItems.Count <> 0 Then
-                    For i = 0 To chklstPrerequisite.CheckedItems.Count - 1
-
-                        strSQL = vbNullString
-                        strSQL &= "INSERT INTO SubjectRelation " & vbCrLf
-                        strSQL &= "VALUES (" & vbCrLf
-                        strSQL &= "'" & txtSubCode.Text & "'" & vbCrLf
-                        strSQL &= ",'" & getSubjectCode(chklstPrerequisite.CheckedItems(i)) & "'" & vbCrLf
-                        strSQL &= ",getdate()" & vbCrLf
-                        strSQL &= ",Null" & vbCrLf
-                        strSQL &= ",getdate()" & vbCrLf
-                        strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
-                        rsInserPre.Open(strSQL, conDB, 1, 4)
-
-                    Next
+                    If blnResult = True Then
+                        Call AuditTrail(1, "Registered Subject with subject code of: " & txtSubCode.Text)
+                        MsgBox("Subject Registered!", vbInformation)
+                    End If
                 End If
-
-                Call AuditTrail(1, "Registered Subject with subject code of: " & txtSubCode.Text)
-
-                MsgBox("Subject Registered!", vbInformation)
             End If
-
-           
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
+       
 
 
     End Sub
 
     Private Sub btnModify_Click(sender As Object, e As EventArgs) Handles btnModify.Click
-        Dim rsUpdateSub As New ADODB.Recordset
-        Dim rsUpdatePre As New ADODB.Recordset
-        Dim rsDeletePre As New ADODB.Recordset
-        Dim strChckItems As String = ""
+        Dim blnResult As Boolean
 
-        If MsgBox("Are you sure you want to save changes?", vbYesNo, vbQuestion) = vbYes Then
+        Try
+            If MsgBox("Are you sure you want to save changes?", vbYesNo, vbQuestion) = vbYes Then
+                strSQL = "UPDATE Subject" & vbCrLf
+                strSQL &= "Set SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
+                strSQL &= ", Description = '" & txtSubDescription.Text & "'" & vbCrLf
+                strSQL &= ", Units = " & txtUnit.Text & vbCrLf
+                strSQL &= ", SubjectType =  '" & getSubjectTypeCode(cboType.Text) & "'" & vbCrLf
+                strSQL &= ", UpdatedDate = getDate() " & vbCrLf
+                strSQL &= ", UpdatedBy ='" & frm_Login.txtUserName.Text & "'" & vbCrLf
+                strSQL &= "WHERE SubjectCode ='" & strCode & "'" & vbCrLf
+                blnResult = EXEC_SHS(strSQL)
 
-            Call SQLConnect()
-            strSQL = vbNullString
-            strSQL &= "UPDATE Subject" & vbCrLf
-            strSQL &= "Set SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
-            strSQL &= ", Description = '" & txtSubDescription.Text & "'" & vbCrLf
-            strSQL &= ", Units = " & txtUnit.Text & vbCrLf
-            strSQL &= ", SubjectType =  '" & getSubjectTypeCode(cboType.Text) & "'" & vbCrLf
-            strSQL &= ", UpdatedDate = getDate() " & vbCrLf
-            strSQL &= ", UpdatedBy ='" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= "WHERE SubjectCode ='" & strCode & "'" & vbCrLf
-            rsUpdateSub.Open(strSQL, conDB, 1, 4)
+                If blnResult = True Then
+                    strSQL = "UPDATE SubjectRelation" & vbCrLf
+                    strSQL &= "SET SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
+                    strSQL &= "WHERE SubjectCode = '" & strCode & "'" & vbCrLf
+                    blnResult = EXEC_SHS(strSQL)
 
-            strSQL = vbNullString
-            strSQL &= "UPDATE SubjectRelation" & vbCrLf
-            strSQL &= "SET SubjectCode = '" & txtSubCode.Text & "'" & vbCrLf
-            strSQL &= "WHERE SubjectCode = '" & strCode & "'" & vbCrLf
-            rsUpdatePre.Open(strSQL, conDB, 1, 4)
-
-            If chklstPrerequisite.CheckedItems.Count <> 0 Then
-                For i = 0 To chklstPrerequisite.CheckedItems.Count - 1
-                    strChckItems &= "'" + chklstPrerequisite.CheckedItems(i) + "'" + ","
-                Next
+                    'If chklstPrerequisite.CheckedItems.Count <> 0 Then
+                    '    For i = 0 To chklstPrerequisite.CheckedItems.Count - 1
+                    '        strChckItems &= "'" + chklstPrerequisite.CheckedItems(i) + "'" + ","
+                    '    Next
 
 
-                strChckItems = strChckItems.Substring(0, strChckItems.Length - 1)
+                    '    strChckItems = strChckItems.Substring(0, strChckItems.Length - 1)
 
-                strSQL = vbNullString
-                strSQL &= "DELETE SubjectRelation" & vbCrLf
-                strSQL &= "WHERE SubjectCode = '" & txtSubCode.Text & "' AND PreRequisiteCode NOT IN(" & strChckItems & ")"
-                rsDeletePre.Open(strSQL, conDB, 1, 4)
+                    '    strSQL = vbNullString
+                    '    strSQL &= "DELETE SubjectRelation" & vbCrLf
+                    '    strSQL &= "WHERE SubjectCode = '" & txtSubCode.Text & "' AND PreRequisiteCode NOT IN(" & strChckItems & ")"
+                    '    rsDeletePre.Open(strSQL, conDB, 1, 4)
 
+                    'End If
+                End If
+               
+                Call AuditTrail(2, "Modify Subject with code: " & txtSubCode.Text)
+                MsgBox("Changes Saved!", vbInformation)
+                Me.Close()
             End If
-            Call AuditTrail(2, "Modify Subjectc with code: " & txtSubCode.Text)
-            MsgBox("Changes Saved!", vbInformation)
-            Me.Close()
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
     End Sub
 End Class

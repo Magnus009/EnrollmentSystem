@@ -25,20 +25,22 @@ Partial Class frm_StudentRecords
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.grdResult = New System.Windows.Forms.DataGridView()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.grdStudentsInfo = New System.Windows.Forms.DataGridView()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.grdResult, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdStudentsInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'grdResult
+        'grdStudentsInfo
         '
-        Me.grdResult.AllowUserToAddRows = False
-        Me.grdResult.AllowUserToDeleteRows = False
-        Me.grdResult.AllowUserToResizeColumns = False
-        Me.grdResult.AllowUserToResizeRows = False
-        Me.grdResult.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.grdStudentsInfo.AllowUserToAddRows = False
+        Me.grdStudentsInfo.AllowUserToDeleteRows = False
+        Me.grdStudentsInfo.AllowUserToResizeColumns = False
+        Me.grdStudentsInfo.AllowUserToResizeRows = False
+        Me.grdStudentsInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.grdStudentsInfo.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -46,27 +48,35 @@ Partial Class frm_StudentRecords
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdResult.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.grdResult.ColumnHeadersHeight = 25
-        Me.grdResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.grdResult.Location = New System.Drawing.Point(9, 34)
-        Me.grdResult.Name = "grdResult"
-        Me.grdResult.ReadOnly = True
+        Me.grdStudentsInfo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.grdStudentsInfo.ColumnHeadersHeight = 25
+        Me.grdStudentsInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdResult.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.grdResult.RowHeadersVisible = False
-        Me.grdResult.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grdResult.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.grdResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdResult.Size = New System.Drawing.Size(750, 401)
-        Me.grdResult.TabIndex = 368
+        Me.grdStudentsInfo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.grdStudentsInfo.Location = New System.Drawing.Point(9, 34)
+        Me.grdStudentsInfo.Name = "grdStudentsInfo"
+        Me.grdStudentsInfo.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdStudentsInfo.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.grdStudentsInfo.RowHeadersVisible = False
+        Me.grdStudentsInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grdStudentsInfo.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.grdStudentsInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grdStudentsInfo.Size = New System.Drawing.Size(750, 401)
+        Me.grdStudentsInfo.TabIndex = 368
         '
         'txtSearch
         '
@@ -102,7 +112,7 @@ Partial Class frm_StudentRecords
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(769, 445)
-        Me.Controls.Add(Me.grdResult)
+        Me.Controls.Add(Me.grdStudentsInfo)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.lblSearch)
         Me.Controls.Add(Me.Label1)
@@ -114,12 +124,12 @@ Partial Class frm_StudentRecords
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "STUDENT RECORDS"
-        CType(Me.grdResult, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdStudentsInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents grdResult As System.Windows.Forms.DataGridView
+    Friend WithEvents grdStudentsInfo As System.Windows.Forms.DataGridView
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents lblSearch As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

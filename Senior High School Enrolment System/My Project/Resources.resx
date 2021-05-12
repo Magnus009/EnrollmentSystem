@@ -145,4 +145,7 @@
   <data name="temp_conString2" xml:space="preserve">
     <value>Data Source=ROLLAMAS\SQL_ROLLAMAS;Initial Catalog=SHSEnrollmentSystem;Integrated Security=True</value>
   </data>
+  <data name="ODBCConnection" xml:space="preserve">
+    <value>Dsn=SHSEnrollmentSystem;uid=sa;pwd=81at84;database=SHSEnrollmentSystem</value>
+  </data>
 </root>

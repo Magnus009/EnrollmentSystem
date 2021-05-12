@@ -66,9 +66,9 @@ Partial Class frm_AddSchedule
         Me.grpRegistration.Controls.Add(Me.lblSection)
         Me.grpRegistration.Controls.Add(Me.lblTeacher)
         Me.grpRegistration.Controls.Add(Me.lblSubject)
-        Me.grpRegistration.Location = New System.Drawing.Point(12, 12)
+        Me.grpRegistration.Location = New System.Drawing.Point(6, 0)
         Me.grpRegistration.Name = "grpRegistration"
-        Me.grpRegistration.Size = New System.Drawing.Size(487, 269)
+        Me.grpRegistration.Size = New System.Drawing.Size(478, 254)
         Me.grpRegistration.TabIndex = 0
         Me.grpRegistration.TabStop = False
         '
@@ -77,7 +77,7 @@ Partial Class frm_AddSchedule
         Me.txtTimeTo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTimeTo.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
         Me.txtTimeTo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTimeTo.Location = New System.Drawing.Point(352, 178)
+        Me.txtTimeTo.Location = New System.Drawing.Point(349, 178)
         Me.txtTimeTo.Mask = "00:00"
         Me.txtTimeTo.Name = "txtTimeTo"
         Me.txtTimeTo.PromptChar = Global.Microsoft.VisualBasic.ChrW(48)
@@ -91,7 +91,7 @@ Partial Class frm_AddSchedule
         Me.txtTimeFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTimeFrom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
         Me.txtTimeFrom.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTimeFrom.Location = New System.Drawing.Point(161, 178)
+        Me.txtTimeFrom.Location = New System.Drawing.Point(158, 178)
         Me.txtTimeFrom.Mask = "00:00"
         Me.txtTimeFrom.Name = "txtTimeFrom"
         Me.txtTimeFrom.PromptChar = Global.Microsoft.VisualBasic.ChrW(48)
@@ -106,7 +106,7 @@ Partial Class frm_AddSchedule
         Me.cboTo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTo.FormattingEnabled = True
         Me.cboTo.Items.AddRange(New Object() {"AM", "PM"})
-        Me.cboTo.Location = New System.Drawing.Point(425, 177)
+        Me.cboTo.Location = New System.Drawing.Point(422, 177)
         Me.cboTo.Name = "cboTo"
         Me.cboTo.Size = New System.Drawing.Size(45, 25)
         Me.cboTo.TabIndex = 45
@@ -118,7 +118,7 @@ Partial Class frm_AddSchedule
         Me.cboFrom.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboFrom.FormattingEnabled = True
         Me.cboFrom.Items.AddRange(New Object() {"AM", "PM"})
-        Me.cboFrom.Location = New System.Drawing.Point(235, 177)
+        Me.cboFrom.Location = New System.Drawing.Point(232, 177)
         Me.cboFrom.Name = "cboFrom"
         Me.cboFrom.Size = New System.Drawing.Size(45, 25)
         Me.cboFrom.TabIndex = 44
@@ -129,7 +129,7 @@ Partial Class frm_AddSchedule
         Me.cboSection.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboSection.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSection.FormattingEnabled = True
-        Me.cboSection.Location = New System.Drawing.Point(161, 119)
+        Me.cboSection.Location = New System.Drawing.Point(158, 119)
         Me.cboSection.Name = "cboSection"
         Me.cboSection.Size = New System.Drawing.Size(309, 25)
         Me.cboSection.TabIndex = 43
@@ -139,7 +139,7 @@ Partial Class frm_AddSchedule
         Me.cboStrand.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboStrand.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStrand.FormattingEnabled = True
-        Me.cboStrand.Location = New System.Drawing.Point(161, 26)
+        Me.cboStrand.Location = New System.Drawing.Point(158, 26)
         Me.cboStrand.Name = "cboStrand"
         Me.cboStrand.Size = New System.Drawing.Size(309, 25)
         Me.cboStrand.TabIndex = 1
@@ -149,7 +149,7 @@ Partial Class frm_AddSchedule
         Me.lblStrand.AutoSize = True
         Me.lblStrand.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStrand.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblStrand.Location = New System.Drawing.Point(15, 29)
+        Me.lblStrand.Location = New System.Drawing.Point(88, 29)
         Me.lblStrand.Name = "lblStrand"
         Me.lblStrand.Size = New System.Drawing.Size(58, 16)
         Me.lblStrand.TabIndex = 42
@@ -161,7 +161,7 @@ Partial Class frm_AddSchedule
         Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.Location = New System.Drawing.Point(289, 212)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(110, 42)
+        Me.btnCancel.Size = New System.Drawing.Size(88, 31)
         Me.btnCancel.TabIndex = 10
         Me.btnCancel.Text = "CANCEL"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -171,9 +171,9 @@ Partial Class frm_AddSchedule
         Me.btnUpdate.Enabled = False
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.Location = New System.Drawing.Point(173, 212)
+        Me.btnUpdate.Location = New System.Drawing.Point(195, 212)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(110, 42)
+        Me.btnUpdate.Size = New System.Drawing.Size(88, 31)
         Me.btnUpdate.TabIndex = 9
         Me.btnUpdate.Text = "UPDATE"
         Me.btnUpdate.UseVisualStyleBackColor = True
@@ -183,7 +183,7 @@ Partial Class frm_AddSchedule
         Me.lblTimeTo.AutoSize = True
         Me.lblTimeTo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimeTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblTimeTo.Location = New System.Drawing.Point(286, 181)
+        Me.lblTimeTo.Location = New System.Drawing.Point(283, 181)
         Me.lblTimeTo.Name = "lblTimeTo"
         Me.lblTimeTo.Size = New System.Drawing.Size(60, 16)
         Me.lblTimeTo.TabIndex = 38
@@ -193,9 +193,9 @@ Partial Class frm_AddSchedule
         '
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(57, 212)
+        Me.btnAdd.Location = New System.Drawing.Point(101, 212)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(110, 42)
+        Me.btnAdd.Size = New System.Drawing.Size(88, 31)
         Me.btnAdd.TabIndex = 8
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -204,7 +204,7 @@ Partial Class frm_AddSchedule
         '
         Me.txtRoomNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRoomNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRoomNo.Location = New System.Drawing.Point(161, 149)
+        Me.txtRoomNo.Location = New System.Drawing.Point(158, 149)
         Me.txtRoomNo.Name = "txtRoomNo"
         Me.txtRoomNo.Size = New System.Drawing.Size(309, 23)
         Me.txtRoomNo.TabIndex = 5
@@ -214,7 +214,7 @@ Partial Class frm_AddSchedule
         Me.cboTeacher.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboTeacher.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTeacher.FormattingEnabled = True
-        Me.cboTeacher.Location = New System.Drawing.Point(161, 88)
+        Me.cboTeacher.Location = New System.Drawing.Point(158, 88)
         Me.cboTeacher.Name = "cboTeacher"
         Me.cboTeacher.Size = New System.Drawing.Size(309, 25)
         Me.cboTeacher.TabIndex = 3
@@ -224,7 +224,7 @@ Partial Class frm_AddSchedule
         Me.cboSubject.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboSubject.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSubject.FormattingEnabled = True
-        Me.cboSubject.Location = New System.Drawing.Point(161, 57)
+        Me.cboSubject.Location = New System.Drawing.Point(158, 57)
         Me.cboSubject.Name = "cboSubject"
         Me.cboSubject.Size = New System.Drawing.Size(309, 25)
         Me.cboSubject.TabIndex = 2
@@ -234,7 +234,7 @@ Partial Class frm_AddSchedule
         Me.lblRmNo.AutoSize = True
         Me.lblRmNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRmNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblRmNo.Location = New System.Drawing.Point(16, 152)
+        Me.lblRmNo.Location = New System.Drawing.Point(68, 152)
         Me.lblRmNo.Name = "lblRmNo"
         Me.lblRmNo.Size = New System.Drawing.Size(78, 16)
         Me.lblRmNo.TabIndex = 29
@@ -245,7 +245,7 @@ Partial Class frm_AddSchedule
         Me.lblTimeFrom.AutoSize = True
         Me.lblTimeFrom.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimeFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblTimeFrom.Location = New System.Drawing.Point(16, 181)
+        Me.lblTimeFrom.Location = New System.Drawing.Point(65, 181)
         Me.lblTimeFrom.Name = "lblTimeFrom"
         Me.lblTimeFrom.Size = New System.Drawing.Size(81, 16)
         Me.lblTimeFrom.TabIndex = 28
@@ -256,7 +256,7 @@ Partial Class frm_AddSchedule
         Me.lblSection.AutoSize = True
         Me.lblSection.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblSection.Location = New System.Drawing.Point(16, 122)
+        Me.lblSection.Location = New System.Drawing.Point(83, 122)
         Me.lblSection.Name = "lblSection"
         Me.lblSection.Size = New System.Drawing.Size(63, 16)
         Me.lblSection.TabIndex = 27
@@ -267,7 +267,7 @@ Partial Class frm_AddSchedule
         Me.lblTeacher.AutoSize = True
         Me.lblTeacher.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTeacher.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblTeacher.Location = New System.Drawing.Point(15, 91)
+        Me.lblTeacher.Location = New System.Drawing.Point(12, 91)
         Me.lblTeacher.Name = "lblTeacher"
         Me.lblTeacher.Size = New System.Drawing.Size(134, 16)
         Me.lblTeacher.TabIndex = 26
@@ -278,7 +278,7 @@ Partial Class frm_AddSchedule
         Me.lblSubject.AutoSize = True
         Me.lblSubject.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSubject.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblSubject.Location = New System.Drawing.Point(15, 60)
+        Me.lblSubject.Location = New System.Drawing.Point(82, 60)
         Me.lblSubject.Name = "lblSubject"
         Me.lblSubject.Size = New System.Drawing.Size(64, 16)
         Me.lblSubject.TabIndex = 24
@@ -288,7 +288,7 @@ Partial Class frm_AddSchedule
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(510, 291)
+        Me.ClientSize = New System.Drawing.Size(490, 260)
         Me.Controls.Add(Me.grpRegistration)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False

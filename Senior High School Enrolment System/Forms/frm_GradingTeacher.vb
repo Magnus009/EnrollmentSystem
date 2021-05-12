@@ -63,9 +63,9 @@
         strSQL &= "'' ELSE" & vbCrLf
         strSQL &= "ExtName END AS Name" & vbCrLf
         strSQL &= "FROM Teachers" & vbCrLf
-        strSQL = strSQL & "WHERE  FirstName LIKE '%" & txtSearch.Text & "%' OR MiddleName LIKE '%" & txtSearch.Text & "%'  " & vbCrLf
-        strSQL = strSQL & "OR LastName LIKE '%" & txtSearch.Text & "%'  " & vbCrLf
-        strSQL = strSQL & "ORDER BY LastName " & vbCrLf
+        strSQL += "WHERE  FirstName LIKE '%" & txtSearch.Text & "%' OR MiddleName LIKE '%" & txtSearch.Text & "%'  " & vbCrLf
+        strSQL += "OR LastName LIKE '%" & txtSearch.Text & "%'  " & vbCrLf
+        strSQL += "ORDER BY LastName " & vbCrLf
         rsSearch.Open(strSQL, conDB, 1, 4)
 
 

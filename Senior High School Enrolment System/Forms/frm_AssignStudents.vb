@@ -130,7 +130,7 @@
         Dim strCode() As String
         Dim rsInsert As New ADODB.Recordset
 
-        If MsgBox("Are you sure you want to register these students to Section " & frm_ViewSection.lblSecyionName.Text & "?", vbYesNo) = vbYes Then
+        If MsgBox("Are you sure you want to register these students to Section " & frm_ViewSection.lblSectionName.Text & "?", vbYesNo) = vbYes Then
             strStudentCD = strStudentCD.Substring(0, strStudentCD.Length - 1)
             strCode = strStudentCD.Split(",")
 

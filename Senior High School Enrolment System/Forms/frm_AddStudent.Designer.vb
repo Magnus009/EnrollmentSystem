@@ -90,7 +90,7 @@ Partial Class frm_AddStudent
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtMFName = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.txtMMName = New System.Windows.Forms.TextBox()
+        Me.lblProvince = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -104,7 +104,7 @@ Partial Class frm_AddStudent
         Me.Label27 = New System.Windows.Forms.Label()
         Me.cboStrand = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.cboTarck = New System.Windows.Forms.ComboBox()
+        Me.cboTrack = New System.Windows.Forms.ComboBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -112,6 +112,10 @@ Partial Class frm_AddStudent
         Me.cboSpecial = New System.Windows.Forms.ComboBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.grp = New System.Windows.Forms.GroupBox()
+        Me.txtRelationship = New System.Windows.Forms.TextBox()
+        Me.lblRelationship = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtProvince = New System.Windows.Forms.TextBox()
         Me.grp.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -180,6 +184,7 @@ Partial Class frm_AddStudent
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(253, 25)
         Me.txtFName.TabIndex = 9
+        Me.txtFName.Tag = "*"
         Me.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -278,6 +283,7 @@ Partial Class frm_AddStudent
         Me.txtLName.Name = "txtLName"
         Me.txtLName.Size = New System.Drawing.Size(253, 25)
         Me.txtLName.TabIndex = 11
+        Me.txtLName.Tag = "*"
         Me.txtLName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtMName
@@ -291,6 +297,7 @@ Partial Class frm_AddStudent
         Me.txtMName.Name = "txtMName"
         Me.txtMName.Size = New System.Drawing.Size(253, 25)
         Me.txtMName.TabIndex = 10
+        Me.txtMName.Tag = "*"
         Me.txtMName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblLName
@@ -361,6 +368,7 @@ Partial Class frm_AddStudent
         Me.cboGradeLevel.Name = "cboGradeLevel"
         Me.cboGradeLevel.Size = New System.Drawing.Size(154, 25)
         Me.cboGradeLevel.TabIndex = 3
+        Me.cboGradeLevel.Tag = "*"
         '
         'txtExtName
         '
@@ -386,6 +394,7 @@ Partial Class frm_AddStudent
         Me.txtLRN.Name = "txtLRN"
         Me.txtLRN.Size = New System.Drawing.Size(464, 25)
         Me.txtLRN.TabIndex = 1
+        Me.txtLRN.Tag = "*"
         '
         'lblAge
         '
@@ -409,6 +418,7 @@ Partial Class frm_AddStudent
         Me.cboClassification.Name = "cboClassification"
         Me.cboClassification.Size = New System.Drawing.Size(154, 25)
         Me.cboClassification.TabIndex = 2
+        Me.cboClassification.Tag = "*"
         '
         'lblSex
         '
@@ -457,6 +467,7 @@ Partial Class frm_AddStudent
         Me.cboSex.Name = "cboSex"
         Me.cboSex.Size = New System.Drawing.Size(86, 25)
         Me.cboSex.TabIndex = 15
+        Me.cboSex.Tag = "*"
         '
         'lblPrevSchool
         '
@@ -511,8 +522,9 @@ Partial Class frm_AddStudent
         Me.txtHouseNo.MaxLength = 50
         Me.txtHouseNo.Multiline = True
         Me.txtHouseNo.Name = "txtHouseNo"
-        Me.txtHouseNo.Size = New System.Drawing.Size(253, 25)
+        Me.txtHouseNo.Size = New System.Drawing.Size(198, 25)
         Me.txtHouseNo.TabIndex = 17
+        Me.txtHouseNo.Tag = "*"
         '
         'chkReportCard
         '
@@ -551,12 +563,13 @@ Partial Class frm_AddStudent
         Me.txtSubdBrgy.BackColor = System.Drawing.Color.White
         Me.txtSubdBrgy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSubdBrgy.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSubdBrgy.Location = New System.Drawing.Point(264, 260)
+        Me.txtSubdBrgy.Location = New System.Drawing.Point(209, 260)
         Me.txtSubdBrgy.MaxLength = 50
         Me.txtSubdBrgy.Multiline = True
         Me.txtSubdBrgy.Name = "txtSubdBrgy"
-        Me.txtSubdBrgy.Size = New System.Drawing.Size(253, 25)
+        Me.txtSubdBrgy.Size = New System.Drawing.Size(192, 25)
         Me.txtSubdBrgy.TabIndex = 18
+        Me.txtSubdBrgy.Tag = "*"
         '
         'Label4
         '
@@ -575,12 +588,13 @@ Partial Class frm_AddStudent
         Me.txtCity.BackColor = System.Drawing.Color.White
         Me.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCity.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(517, 260)
+        Me.txtCity.Location = New System.Drawing.Point(401, 260)
         Me.txtCity.MaxLength = 50
         Me.txtCity.Multiline = True
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(253, 25)
+        Me.txtCity.Size = New System.Drawing.Size(191, 25)
         Me.txtCity.TabIndex = 19
+        Me.txtCity.Tag = "*"
         '
         'chkTOR
         '
@@ -597,12 +611,13 @@ Partial Class frm_AddStudent
         Me.txtZipCode.BackColor = System.Drawing.Color.White
         Me.txtZipCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtZipCode.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtZipCode.Location = New System.Drawing.Point(770, 260)
+        Me.txtZipCode.Location = New System.Drawing.Point(783, 260)
         Me.txtZipCode.MaxLength = 4
         Me.txtZipCode.Multiline = True
         Me.txtZipCode.Name = "txtZipCode"
-        Me.txtZipCode.Size = New System.Drawing.Size(128, 25)
+        Me.txtZipCode.Size = New System.Drawing.Size(115, 25)
         Me.txtZipCode.TabIndex = 20
+        Me.txtZipCode.Tag = "*"
         '
         'dtpBirthday
         '
@@ -655,6 +670,7 @@ Partial Class frm_AddStudent
         Me.txtReligion.Name = "txtReligion"
         Me.txtReligion.Size = New System.Drawing.Size(232, 25)
         Me.txtReligion.TabIndex = 16
+        Me.txtReligion.Tag = "*"
         '
         'Label9
         '
@@ -687,7 +703,7 @@ Partial Class frm_AddStudent
         Me.lblHouseNo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHouseNo.Location = New System.Drawing.Point(11, 285)
         Me.lblHouseNo.Name = "lblHouseNo"
-        Me.lblHouseNo.Size = New System.Drawing.Size(253, 25)
+        Me.lblHouseNo.Size = New System.Drawing.Size(198, 25)
         Me.lblHouseNo.TabIndex = 439
         Me.lblHouseNo.Text = "HOUSE No./STREET"
         Me.lblHouseNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -697,11 +713,11 @@ Partial Class frm_AddStudent
         Me.lblCityMunicipality.BackColor = System.Drawing.Color.Silver
         Me.lblCityMunicipality.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCityMunicipality.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCityMunicipality.Location = New System.Drawing.Point(517, 285)
+        Me.lblCityMunicipality.Location = New System.Drawing.Point(401, 285)
         Me.lblCityMunicipality.Name = "lblCityMunicipality"
-        Me.lblCityMunicipality.Size = New System.Drawing.Size(253, 25)
+        Me.lblCityMunicipality.Size = New System.Drawing.Size(191, 25)
         Me.lblCityMunicipality.TabIndex = 441
-        Me.lblCityMunicipality.Text = "City/Province"
+        Me.lblCityMunicipality.Text = "City/Municipality"
         Me.lblCityMunicipality.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblBarangay
@@ -709,9 +725,9 @@ Partial Class frm_AddStudent
         Me.lblBarangay.BackColor = System.Drawing.Color.Silver
         Me.lblBarangay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblBarangay.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBarangay.Location = New System.Drawing.Point(264, 285)
+        Me.lblBarangay.Location = New System.Drawing.Point(209, 285)
         Me.lblBarangay.Name = "lblBarangay"
-        Me.lblBarangay.Size = New System.Drawing.Size(253, 25)
+        Me.lblBarangay.Size = New System.Drawing.Size(192, 25)
         Me.lblBarangay.TabIndex = 440
         Me.lblBarangay.Text = "SUBDIVISION/BARANGAY"
         Me.lblBarangay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -757,9 +773,9 @@ Partial Class frm_AddStudent
         Me.lblzipCode.BackColor = System.Drawing.Color.Silver
         Me.lblzipCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblzipCode.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblzipCode.Location = New System.Drawing.Point(770, 285)
+        Me.lblzipCode.Location = New System.Drawing.Point(783, 285)
         Me.lblzipCode.Name = "lblzipCode"
-        Me.lblzipCode.Size = New System.Drawing.Size(128, 25)
+        Me.lblzipCode.Size = New System.Drawing.Size(115, 25)
         Me.lblzipCode.TabIndex = 443
         Me.lblzipCode.Text = "ZIP Code"
         Me.lblzipCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -787,6 +803,7 @@ Partial Class frm_AddStudent
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.Size = New System.Drawing.Size(240, 25)
         Me.txtContactNo.TabIndex = 21
+        Me.txtContactNo.Tag = "*"
         '
         'Label12
         '
@@ -896,17 +913,17 @@ Partial Class frm_AddStudent
         Me.Label19.Text = "MIDDLE NAME : "
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtMMName
+        'lblProvince
         '
-        Me.txtMMName.BackColor = System.Drawing.Color.White
-        Me.txtMMName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtMMName.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMMName.Location = New System.Drawing.Point(569, 436)
-        Me.txtMMName.MaxLength = 50
-        Me.txtMMName.Multiline = True
-        Me.txtMMName.Name = "txtMMName"
-        Me.txtMMName.Size = New System.Drawing.Size(329, 25)
-        Me.txtMMName.TabIndex = 29
+        Me.lblProvince.BackColor = System.Drawing.Color.White
+        Me.lblProvince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblProvince.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProvince.Location = New System.Drawing.Point(569, 436)
+        Me.lblProvince.MaxLength = 50
+        Me.lblProvince.Multiline = True
+        Me.lblProvince.Name = "lblProvince"
+        Me.lblProvince.Size = New System.Drawing.Size(329, 25)
+        Me.lblProvince.TabIndex = 29
         '
         'Label22
         '
@@ -951,7 +968,7 @@ Partial Class frm_AddStudent
         Me.Label23.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(11, 461)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(147, 25)
+        Me.Label23.Size = New System.Drawing.Size(115, 25)
         Me.Label23.TabIndex = 478
         Me.Label23.Text = "GUARDIAN'S NAME : "
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -961,11 +978,11 @@ Partial Class frm_AddStudent
         Me.txtGuardianName.BackColor = System.Drawing.Color.White
         Me.txtGuardianName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtGuardianName.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGuardianName.Location = New System.Drawing.Point(158, 461)
+        Me.txtGuardianName.Location = New System.Drawing.Point(126, 461)
         Me.txtGuardianName.MaxLength = 150
         Me.txtGuardianName.Multiline = True
         Me.txtGuardianName.Name = "txtGuardianName"
-        Me.txtGuardianName.Size = New System.Drawing.Size(411, 25)
+        Me.txtGuardianName.Size = New System.Drawing.Size(237, 25)
         Me.txtGuardianName.TabIndex = 30
         '
         'Label24
@@ -973,7 +990,7 @@ Partial Class frm_AddStudent
         Me.Label24.BackColor = System.Drawing.Color.Silver
         Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label24.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(569, 461)
+        Me.Label24.Location = New System.Drawing.Point(612, 461)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(115, 25)
         Me.Label24.TabIndex = 479
@@ -985,11 +1002,11 @@ Partial Class frm_AddStudent
         Me.txtFamContactNo.BackColor = System.Drawing.Color.White
         Me.txtFamContactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFamContactNo.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFamContactNo.Location = New System.Drawing.Point(684, 461)
+        Me.txtFamContactNo.Location = New System.Drawing.Point(727, 461)
         Me.txtFamContactNo.MaxLength = 12
         Me.txtFamContactNo.Multiline = True
         Me.txtFamContactNo.Name = "txtFamContactNo"
-        Me.txtFamContactNo.Size = New System.Drawing.Size(214, 25)
+        Me.txtFamContactNo.Size = New System.Drawing.Size(171, 25)
         Me.txtFamContactNo.TabIndex = 32
         '
         'Label25
@@ -1059,14 +1076,14 @@ Partial Class frm_AddStudent
         Me.Label28.Text = "TRACK : "
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'cboTarck
+        'cboTrack
         '
-        Me.cboTarck.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboTarck.FormattingEnabled = True
-        Me.cboTarck.Location = New System.Drawing.Point(126, 537)
-        Me.cboTarck.Name = "cboTarck"
-        Me.cboTarck.Size = New System.Drawing.Size(212, 25)
-        Me.cboTarck.TabIndex = 33
+        Me.cboTrack.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboTrack.FormattingEnabled = True
+        Me.cboTrack.Location = New System.Drawing.Point(126, 537)
+        Me.cboTrack.Name = "cboTrack"
+        Me.cboTrack.Size = New System.Drawing.Size(212, 25)
+        Me.cboTrack.TabIndex = 33
         '
         'Label29
         '
@@ -1144,13 +1161,17 @@ Partial Class frm_AddStudent
         '
         Me.grp.BackColor = System.Drawing.Color.Transparent
         Me.grp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.grp.Controls.Add(Me.Label31)
+        Me.grp.Controls.Add(Me.txtProvince)
+        Me.grp.Controls.Add(Me.txtRelationship)
+        Me.grp.Controls.Add(Me.lblRelationship)
         Me.grp.Controls.Add(Me.Label30)
         Me.grp.Controls.Add(Me.cboSpecial)
         Me.grp.Controls.Add(Me.btnUpdate)
         Me.grp.Controls.Add(Me.btnAdd)
         Me.grp.Controls.Add(Me.btnClose)
         Me.grp.Controls.Add(Me.Label29)
-        Me.grp.Controls.Add(Me.cboTarck)
+        Me.grp.Controls.Add(Me.cboTrack)
         Me.grp.Controls.Add(Me.Label28)
         Me.grp.Controls.Add(Me.cboStrand)
         Me.grp.Controls.Add(Me.Label27)
@@ -1164,7 +1185,7 @@ Partial Class frm_AddStudent
         Me.grp.Controls.Add(Me.Label20)
         Me.grp.Controls.Add(Me.Label21)
         Me.grp.Controls.Add(Me.Label22)
-        Me.grp.Controls.Add(Me.txtMMName)
+        Me.grp.Controls.Add(Me.lblProvince)
         Me.grp.Controls.Add(Me.Label19)
         Me.grp.Controls.Add(Me.txtMFName)
         Me.grp.Controls.Add(Me.Label18)
@@ -1236,6 +1257,55 @@ Partial Class frm_AddStudent
         Me.grp.Size = New System.Drawing.Size(910, 623)
         Me.grp.TabIndex = 373
         Me.grp.TabStop = False
+        '
+        'txtRelationship
+        '
+        Me.txtRelationship.BackColor = System.Drawing.Color.White
+        Me.txtRelationship.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRelationship.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRelationship.Location = New System.Drawing.Point(460, 461)
+        Me.txtRelationship.MaxLength = 150
+        Me.txtRelationship.Multiline = True
+        Me.txtRelationship.Name = "txtRelationship"
+        Me.txtRelationship.Size = New System.Drawing.Size(152, 25)
+        Me.txtRelationship.TabIndex = 485
+        '
+        'lblRelationship
+        '
+        Me.lblRelationship.BackColor = System.Drawing.Color.Silver
+        Me.lblRelationship.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblRelationship.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRelationship.Location = New System.Drawing.Point(363, 461)
+        Me.lblRelationship.Name = "lblRelationship"
+        Me.lblRelationship.Size = New System.Drawing.Size(97, 25)
+        Me.lblRelationship.TabIndex = 486
+        Me.lblRelationship.Text = "RELATIONSHIP :"
+        Me.lblRelationship.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label31
+        '
+        Me.Label31.BackColor = System.Drawing.Color.Silver
+        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(592, 285)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(191, 25)
+        Me.Label31.TabIndex = 488
+        Me.Label31.Text = "Province"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtProvince
+        '
+        Me.txtProvince.BackColor = System.Drawing.Color.White
+        Me.txtProvince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtProvince.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProvince.Location = New System.Drawing.Point(592, 260)
+        Me.txtProvince.MaxLength = 50
+        Me.txtProvince.Multiline = True
+        Me.txtProvince.Name = "txtProvince"
+        Me.txtProvince.Size = New System.Drawing.Size(191, 25)
+        Me.txtProvince.TabIndex = 487
+        Me.txtProvince.Tag = "*"
         '
         'frm_AddStudent
         '
@@ -1326,7 +1396,7 @@ Partial Class frm_AddStudent
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents txtMFName As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents txtMMName As System.Windows.Forms.TextBox
+    Friend WithEvents lblProvince As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
@@ -1340,7 +1410,7 @@ Partial Class frm_AddStudent
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents cboStrand As System.Windows.Forms.ComboBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents cboTarck As System.Windows.Forms.ComboBox
+    Friend WithEvents cboTrack As System.Windows.Forms.ComboBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents btnAdd As System.Windows.Forms.Button
@@ -1348,4 +1418,8 @@ Partial Class frm_AddStudent
     Friend WithEvents cboSpecial As System.Windows.Forms.ComboBox
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents grp As System.Windows.Forms.GroupBox
+    Friend WithEvents txtRelationship As System.Windows.Forms.TextBox
+    Friend WithEvents lblRelationship As System.Windows.Forms.Label
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents txtProvince As System.Windows.Forms.TextBox
 End Class

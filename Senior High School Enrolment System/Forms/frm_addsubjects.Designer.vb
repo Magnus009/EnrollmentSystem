@@ -23,6 +23,7 @@ Partial Class frm_AddSubjects
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grpSub = New System.Windows.Forms.GroupBox()
+        Me.lblSubType = New System.Windows.Forms.Label()
         Me.cboType = New System.Windows.Forms.ComboBox()
         Me.lblUnits = New System.Windows.Forms.Label()
         Me.txtUnit = New System.Windows.Forms.TextBox()
@@ -35,7 +36,6 @@ Partial Class frm_AddSubjects
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnModify = New System.Windows.Forms.Button()
-        Me.lblSubType = New System.Windows.Forms.Label()
         Me.grpSub.SuspendLayout()
         Me.grpPrerequisite.SuspendLayout()
         Me.SuspendLayout()
@@ -52,25 +52,36 @@ Partial Class frm_AddSubjects
         Me.grpSub.Controls.Add(Me.txtSubCode)
         Me.grpSub.Location = New System.Drawing.Point(12, 12)
         Me.grpSub.Name = "grpSub"
-        Me.grpSub.Size = New System.Drawing.Size(665, 120)
+        Me.grpSub.Size = New System.Drawing.Size(665, 84)
         Me.grpSub.TabIndex = 0
         Me.grpSub.TabStop = False
+        '
+        'lblSubType
+        '
+        Me.lblSubType.AutoSize = True
+        Me.lblSubType.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubType.Location = New System.Drawing.Point(257, 51)
+        Me.lblSubType.Name = "lblSubType"
+        Me.lblSubType.Size = New System.Drawing.Size(91, 16)
+        Me.lblSubType.TabIndex = 7
+        Me.lblSubType.Text = "Subject Type"
+        Me.lblSubType.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'cboType
         '
         Me.cboType.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboType.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboType.FormattingEnabled = True
-        Me.cboType.Location = New System.Drawing.Point(147, 69)
+        Me.cboType.Location = New System.Drawing.Point(351, 48)
         Me.cboType.Name = "cboType"
-        Me.cboType.Size = New System.Drawing.Size(276, 25)
+        Me.cboType.Size = New System.Drawing.Size(258, 25)
         Me.cboType.TabIndex = 6
         '
         'lblUnits
         '
         Me.lblUnits.AutoSize = True
         Me.lblUnits.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUnits.Location = New System.Drawing.Point(70, 95)
+        Me.lblUnits.Location = New System.Drawing.Point(66, 51)
         Me.lblUnits.Name = "lblUnits"
         Me.lblUnits.Size = New System.Drawing.Size(38, 16)
         Me.lblUnits.TabIndex = 5
@@ -80,7 +91,7 @@ Partial Class frm_AddSubjects
         '
         Me.txtUnit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUnit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUnit.Location = New System.Drawing.Point(41, 69)
+        Me.txtUnit.Location = New System.Drawing.Point(107, 48)
         Me.txtUnit.Name = "txtUnit"
         Me.txtUnit.Size = New System.Drawing.Size(100, 23)
         Me.txtUnit.TabIndex = 4
@@ -89,17 +100,18 @@ Partial Class frm_AddSubjects
         '
         Me.lblDescription.AutoSize = True
         Me.lblDescription.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescription.Location = New System.Drawing.Point(317, 45)
+        Me.lblDescription.Location = New System.Drawing.Point(215, 23)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(133, 16)
         Me.lblDescription.TabIndex = 3
         Me.lblDescription.Text = "Subject Description"
+        Me.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblCode
         '
         Me.lblCode.AutoSize = True
         Me.lblCode.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCode.Location = New System.Drawing.Point(70, 45)
+        Me.lblCode.Location = New System.Drawing.Point(62, 21)
         Me.lblCode.Name = "lblCode"
         Me.lblCode.Size = New System.Drawing.Size(43, 16)
         Me.lblCode.TabIndex = 2
@@ -109,16 +121,16 @@ Partial Class frm_AddSubjects
         '
         Me.txtSubDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSubDescription.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSubDescription.Location = New System.Drawing.Point(147, 19)
+        Me.txtSubDescription.Location = New System.Drawing.Point(351, 20)
         Me.txtSubDescription.Name = "txtSubDescription"
-        Me.txtSubDescription.Size = New System.Drawing.Size(474, 23)
+        Me.txtSubDescription.Size = New System.Drawing.Size(258, 23)
         Me.txtSubDescription.TabIndex = 1
         '
         'txtSubCode
         '
         Me.txtSubCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSubCode.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSubCode.Location = New System.Drawing.Point(41, 19)
+        Me.txtSubCode.Location = New System.Drawing.Point(108, 19)
         Me.txtSubCode.Name = "txtSubCode"
         Me.txtSubCode.Size = New System.Drawing.Size(100, 23)
         Me.txtSubCode.TabIndex = 0
@@ -127,19 +139,20 @@ Partial Class frm_AddSubjects
         '
         Me.grpPrerequisite.Controls.Add(Me.chklstPrerequisite)
         Me.grpPrerequisite.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpPrerequisite.Location = New System.Drawing.Point(12, 137)
+        Me.grpPrerequisite.Location = New System.Drawing.Point(12, 102)
         Me.grpPrerequisite.Name = "grpPrerequisite"
-        Me.grpPrerequisite.Size = New System.Drawing.Size(665, 246)
+        Me.grpPrerequisite.Size = New System.Drawing.Size(665, 231)
         Me.grpPrerequisite.TabIndex = 1
         Me.grpPrerequisite.TabStop = False
         Me.grpPrerequisite.Text = "PRE-REQUISITE"
         '
         'chklstPrerequisite
         '
+        Me.chklstPrerequisite.BackColor = System.Drawing.SystemColors.Control
         Me.chklstPrerequisite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.chklstPrerequisite.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chklstPrerequisite.FormattingEnabled = True
-        Me.chklstPrerequisite.Location = New System.Drawing.Point(21, 24)
+        Me.chklstPrerequisite.Location = New System.Drawing.Point(21, 21)
         Me.chklstPrerequisite.Name = "chklstPrerequisite"
         Me.chklstPrerequisite.Size = New System.Drawing.Size(627, 200)
         Me.chklstPrerequisite.TabIndex = 0
@@ -148,7 +161,7 @@ Partial Class frm_AddSubjects
         '
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(454, 387)
+        Me.btnAdd.Location = New System.Drawing.Point(454, 339)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(101, 32)
         Me.btnAdd.TabIndex = 2
@@ -159,7 +172,7 @@ Partial Class frm_AddSubjects
         '
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(559, 387)
+        Me.btnCancel.Location = New System.Drawing.Point(559, 339)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(101, 32)
         Me.btnCancel.TabIndex = 3
@@ -170,28 +183,18 @@ Partial Class frm_AddSubjects
         '
         Me.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModify.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModify.Location = New System.Drawing.Point(454, 387)
+        Me.btnModify.Location = New System.Drawing.Point(454, 339)
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(101, 32)
         Me.btnModify.TabIndex = 4
         Me.btnModify.Text = "MODIFY"
         Me.btnModify.UseVisualStyleBackColor = True
         '
-        'lblSubType
-        '
-        Me.lblSubType.AutoSize = True
-        Me.lblSubType.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubType.Location = New System.Drawing.Point(235, 97)
-        Me.lblSubType.Name = "lblSubType"
-        Me.lblSubType.Size = New System.Drawing.Size(91, 16)
-        Me.lblSubType.TabIndex = 7
-        Me.lblSubType.Text = "Subject Type"
-        '
         'frm_AddSubjects
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(689, 427)
+        Me.ClientSize = New System.Drawing.Size(689, 379)
         Me.Controls.Add(Me.btnModify)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)

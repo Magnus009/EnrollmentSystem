@@ -39,9 +39,9 @@ Partial Class frm_ViewSubjectRecords
         '
         Me.grpHeader.Controls.Add(Me.lblSearch)
         Me.grpHeader.Controls.Add(Me.txtSearch)
-        Me.grpHeader.Location = New System.Drawing.Point(12, 12)
+        Me.grpHeader.Location = New System.Drawing.Point(7, -3)
         Me.grpHeader.Name = "grpHeader"
-        Me.grpHeader.Size = New System.Drawing.Size(726, 78)
+        Me.grpHeader.Size = New System.Drawing.Size(683, 45)
         Me.grpHeader.TabIndex = 0
         Me.grpHeader.TabStop = False
         '
@@ -49,7 +49,7 @@ Partial Class frm_ViewSubjectRecords
         '
         Me.lblSearch.AutoSize = True
         Me.lblSearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearch.Location = New System.Drawing.Point(27, 33)
+        Me.lblSearch.Location = New System.Drawing.Point(8, 18)
         Me.lblSearch.Name = "lblSearch"
         Me.lblSearch.Size = New System.Drawing.Size(67, 16)
         Me.lblSearch.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class frm_ViewSubjectRecords
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(99, 30)
+        Me.txtSearch.Location = New System.Drawing.Point(80, 15)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(598, 23)
         Me.txtSearch.TabIndex = 0
@@ -67,9 +67,9 @@ Partial Class frm_ViewSubjectRecords
         'grpResult
         '
         Me.grpResult.Controls.Add(Me.grdResult)
-        Me.grpResult.Location = New System.Drawing.Point(12, 96)
+        Me.grpResult.Location = New System.Drawing.Point(7, 42)
         Me.grpResult.Name = "grpResult"
-        Me.grpResult.Size = New System.Drawing.Size(726, 377)
+        Me.grpResult.Size = New System.Drawing.Size(683, 361)
         Me.grpResult.TabIndex = 1
         Me.grpResult.TabStop = False
         '
@@ -81,6 +81,7 @@ Partial Class frm_ViewSubjectRecords
         Me.grdResult.AllowUserToResizeRows = False
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grdResult.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.grdResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdResult.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -99,7 +100,7 @@ Partial Class frm_ViewSubjectRecords
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.grdResult.DefaultCellStyle = DataGridViewCellStyle3
-        Me.grdResult.Location = New System.Drawing.Point(30, 19)
+        Me.grdResult.Location = New System.Drawing.Point(7, 14)
         Me.grdResult.Name = "grdResult"
         Me.grdResult.RowHeadersVisible = False
         Me.grdResult.Size = New System.Drawing.Size(667, 340)
@@ -109,7 +110,7 @@ Partial Class frm_ViewSubjectRecords
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(750, 485)
+        Me.ClientSize = New System.Drawing.Size(696, 409)
         Me.Controls.Add(Me.grpResult)
         Me.Controls.Add(Me.grpHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

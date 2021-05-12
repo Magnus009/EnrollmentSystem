@@ -1,0 +1,65 @@
+IF OBJECT_ID ('dbo.Students') IS NOT NULL
+	DROP TABLE dbo.Students
+GO
+
+CREATE TABLE dbo.Students
+	(
+	StudentID        VARCHAR (6) NOT NULL,
+	LRN              VARCHAR (15) NOT NULL,
+	FirstName        VARCHAR (50),
+	MiddleName       VARCHAR (50),
+	LastName         VARCHAR (50),
+	ExtName          VARCHAR (50),
+	Birthday         DATE,
+	Age              INT,
+	Sex              VARCHAR (10),
+	Religion         VARCHAR (50),
+	HouseNo          VARCHAR (50),
+	BrgyNo           VARCHAR (50),
+	City             VARCHAR (50),
+	Province         VARCHAR (50),
+	ContactNo        VARCHAR (20),
+	ZipCode          VARCHAR (50),
+	isIndigenous     BIT,
+	Classification   VARCHAR (20),
+	PreviousSchool   VARCHAR (150),
+	GradeLevel       INT,
+	TrackID          VARCHAR (6),
+	StrandCode       VARCHAR (5),
+	SpecializationCD VARCHAR (10),
+	havePSA          BIT,
+	haveReportCard   BIT,
+	haveTOR          BIT,
+	CreatedDate      DATE,
+	UpdatedDate      DATE,
+	DeletedDate      DATE,
+	UpdatedBy        VARCHAR (6),
+	PRIMARY KEY (StudentID, LRN)
+	)
+GO
+
+IF OBJECT_ID ('dbo.FamilyBackground') IS NOT NULL
+	DROP TABLE dbo.FamilyBackground
+GO
+
+CREATE TABLE dbo.FamilyBackground
+	(
+	StudentLRN       NVARCHAR (15) NOT NULL,
+	FatherLastName   VARCHAR (50),
+	FatherFirstName  VARCHAR (50),
+	FatherMiddleName VARCHAR (50),
+	MotherLastName   VARCHAR (50),
+	MotherFirstName  VARCHAR (50),
+	MotherMiddleName VARCHAR (50),
+	GuardianName     VARCHAR (150),
+	Relationship     VARCHAR (150),
+	Address          VARCHAR (250),
+	ContactNo        NVARCHAR (15),
+	CreatedDate      DATE,
+	DeletedDate      DATE,
+	UpdatedDAte      DATE,
+	UpdatedBy        VARCHAR (6),
+	PRIMARY KEY (StudentLRN)
+	)
+GO
+

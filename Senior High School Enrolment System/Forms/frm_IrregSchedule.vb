@@ -2,8 +2,8 @@
     Dim strSQL As String
     Dim strCode As String
     Private Sub frm_IrregSchedule_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call setHeader()
-        Call getSubjects()
+        'Call setHeader()
+        'Call getSubjects()
     End Sub
 
     Private Sub setHeader()

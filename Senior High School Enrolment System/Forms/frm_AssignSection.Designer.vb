@@ -76,6 +76,7 @@ Partial Class frm_AssignSection
         Me.grdSections.AllowUserToDeleteRows = False
         Me.grdSections.AllowUserToResizeColumns = False
         Me.grdSections.AllowUserToResizeRows = False
+        Me.grdSections.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdSections.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control

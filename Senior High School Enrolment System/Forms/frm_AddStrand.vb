@@ -2,70 +2,70 @@
     Dim strSQL As String
     Public strCode As String
     Private Sub txtAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim rsAdd As New ADODB.Recordset
-        Dim rsCheck As New ADODB.Recordset
+        Dim intCheck As Integer
+        Dim blnResult As Boolean
+        Try
+            Dim dlg As New DialogResult
+            dlg = MsgBox("Are you sure you want to add Strand?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "ADD STRAND")
 
+            If dlg = Windows.Forms.DialogResult.Yes Then
 
-        If MsgBox("Are you sure you want to add Strand?", vbYesNo, vbQuestion) = vbYes Then
-            Call SQLConnect()
-
-            strSQL = vbNullString
-            strSQL &= "SELECT * FROM Strand " & vbCrLf
-            strSQL &= "WHERE CourseCode ='" & txtStrandCode.Text & "'" & vbCrLf
-            rsCheck.Open(strSQL, conDB, 1, 4)
-
-            If rsCheck.EOF = False Then
-                MsgBox("Strand/Course Code already Exist!", vbExclamation)
-            Else
                 strSQL = vbNullString
-                strSQL &= "INSERT INTO Strand " & vbCrLf
-                strSQL &= "VALUES ( " & vbCrLf
-                strSQL &= "'" & txtStrandCode.Text & "'" & vbCrLf
-                strSQL &= ",'" & txtStrandName.Text & "'" & vbCrLf
-                strSQL &= ",'" & txtDescription.Text & "'" & vbCrLf
-                strSQL &= ",getDate()" & vbCrLf
-                strSQL &= ",Null" & vbCrLf
-                strSQL &= ",getDate()" & vbCrLf
-                strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
-                rsAdd.Open(strSQL, conDB, 1, 4)
+                strSQL &= "SELECT count(CourseCode) FROM Strand " & vbCrLf
+                strSQL &= "WHERE CourseCode ='" & txtStrandCode.Text & "'" & vbCrLf
+                intCheck = SELECT_SHS(strSQL).Rows(0)(0)
 
-                AuditTrail(1, "Added Sgtrand with strand code:" & txtStrandCode.Text)
+                If intCheck <> 0 Then
+                    MsgBox("Strand/Course Code already Exist!", vbExclamation)
+                Else
+                    strSQL = vbNullString
+                    strSQL &= "INSERT INTO Strand " & vbCrLf
+                    strSQL &= "VALUES ( " & vbCrLf
+                    strSQL &= "'" & txtStrandCode.Text & "'" & vbCrLf
+                    strSQL &= ",'" & txtStrandName.Text & "'" & vbCrLf
+                    strSQL &= ",'" & txtDescription.Text & "'" & vbCrLf
+                    strSQL &= ",getDate()" & vbCrLf
+                    strSQL &= ",Null" & vbCrLf
+                    strSQL &= ",getDate()" & vbCrLf
+                    strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+                    blnResult = EXEC_SHS(strSQL)
 
-                MsgBox("Saved Succesfully!", vbInformation)
+                    If blnResult = True Then
+                        AuditTrail(1, "Added Sgtrand with strand code:" & txtStrandCode.Text)
+                        MsgBox("Saved Succesfully!", vbInformation)
+                    End If
+                End If
             End If
-
-
-            
-        End If
-        
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
     End Sub
-
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
+        Me.Hide()
     End Sub
-
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim rsUpdate As New ADODB.Recordset
+        Dim blnResult As Boolean
+        Try
+            If MsgBox("Are you sure you want to save changes?", vbYesNo) = vbYes Then
+                strSQL = vbNullString
+                strSQL &= "UPDATE Strand" & vbCrLf
+                strSQL &= "SET CourseCode = '" & txtStrandCode.Text & "'" & vbCrLf
+                strSQL &= ", CourseName = '" & txtStrandName.Text & "'" & vbCrLf
+                strSQL &= ", Description = '" & txtDescription.Text & "'" & vbCrLf
+                strSQL &= ", UpdatedDate = getdate()" & vbCrLf
+                strSQL &= ", UpdatedBy = '" & frm_Login.txtUserName.Text & "'" & vbCrLf
+                strSQL &= "WHERE CourseCode = '" & strCode & "'" & vbCrLf
+                blnResult = EXEC_SHS(strSQL)
 
-        If MsgBox("Are you sure you want to save changes?", vbYesNo) = vbYes Then
-
-
-            strSQL = vbNullString
-            strSQL &= "UPDATE Strand" & vbCrLf
-            strSQL &= "SET CourseCode = '" & txtStrandCode.Text & "'" & vbCrLf
-            strSQL &= ", CourseName = '" & txtStrandName.Text & "'" & vbCrLf
-            strSQL &= ", Description = '" & txtDescription.Text & "'" & vbCrLf
-            strSQL &= ", UpdatedDate = getdate()" & vbCrLf
-            strSQL &= ", UpdatedBy = '" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= "WHERE CourseCode = '" & strCode & "'" & vbCrLf
-            rsUpdate.Open(strSQL, conDB, 1, 4)
-
-            AuditTrail(2, "Updated Strand Information with Strand Code:" & txtStrandCode.Text)
-
-            MsgBox("Changes Saved!", vbInformation)
-
-        End If
-        
-
+                If blnResult = True Then
+                    AuditTrail(2, "Updated Strand Information with Strand Code:" & txtStrandCode.Text)
+                    MsgBox("Changes Saved!", vbInformation)
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
     End Sub
+
+    
 End Class

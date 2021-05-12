@@ -28,7 +28,7 @@ Partial Class frm_ViewSection
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.lblSecyionName = New System.Windows.Forms.Label()
+        Me.lblSectionName = New System.Windows.Forms.Label()
         Me.lblStrand = New System.Windows.Forms.Label()
         Me.lblSectionCode = New System.Windows.Forms.Label()
         Me.grpSched = New System.Windows.Forms.GroupBox()
@@ -61,15 +61,15 @@ Partial Class frm_ViewSection
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblSecyionName
+        'lblSectionName
         '
-        Me.lblSecyionName.AutoSize = True
-        Me.lblSecyionName.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSecyionName.Location = New System.Drawing.Point(266, 34)
-        Me.lblSecyionName.Name = "lblSecyionName"
-        Me.lblSecyionName.Size = New System.Drawing.Size(160, 23)
-        Me.lblSecyionName.TabIndex = 1
-        Me.lblSecyionName.Text = "[SECTION NAME]"
+        Me.lblSectionName.AutoSize = True
+        Me.lblSectionName.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSectionName.Location = New System.Drawing.Point(266, 34)
+        Me.lblSectionName.Name = "lblSectionName"
+        Me.lblSectionName.Size = New System.Drawing.Size(160, 23)
+        Me.lblSectionName.TabIndex = 1
+        Me.lblSectionName.Text = "[SECTION NAME]"
         '
         'lblStrand
         '
@@ -120,10 +120,11 @@ Partial Class frm_ViewSection
         Me.grdSubjects.AllowUserToDeleteRows = False
         Me.grdSubjects.AllowUserToResizeColumns = False
         Me.grdSubjects.AllowUserToResizeRows = False
+        Me.grdSubjects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdSubjects.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -240,10 +241,11 @@ Partial Class frm_ViewSection
         Me.grdStudents.AllowUserToDeleteRows = False
         Me.grdStudents.AllowUserToResizeColumns = False
         Me.grdStudents.AllowUserToResizeRows = False
+        Me.grdStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdStudents.BackgroundColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -404,7 +406,7 @@ Partial Class frm_ViewSection
         Me.Controls.Add(Me.grpSched)
         Me.Controls.Add(Me.lblSectionCode)
         Me.Controls.Add(Me.lblStrand)
-        Me.Controls.Add(Me.lblSecyionName)
+        Me.Controls.Add(Me.lblSectionName)
         Me.Controls.Add(Me.picLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -425,7 +427,7 @@ Partial Class frm_ViewSection
 
     End Sub
     Friend WithEvents picLogo As System.Windows.Forms.PictureBox
-    Friend WithEvents lblSecyionName As System.Windows.Forms.Label
+    Friend WithEvents lblSectionName As System.Windows.Forms.Label
     Friend WithEvents lblStrand As System.Windows.Forms.Label
     Friend WithEvents lblSectionCode As System.Windows.Forms.Label
     Friend WithEvents grpSched As System.Windows.Forms.GroupBox

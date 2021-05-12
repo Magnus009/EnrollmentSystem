@@ -24,8 +24,8 @@
     End Sub
 
     Private Sub RegisterStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterStudentToolStripMenuItem.Click
-        frm_AddStudent.MdiParent = Me
-        frm_AddStudent.Show()
+        'frm_AddStudent.MdiParent = Me
+        'frm_AddStudent.Show()
     End Sub
 
     Private Sub ActivityLogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActivityLogsToolStripMenuItem.Click

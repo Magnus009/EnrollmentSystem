@@ -44,7 +44,7 @@
 
         Call SQLConnect()
         strSQL = ""
-        strSQL = strSQL & "SELECT DeptCode, DeptName FROM Department"
+        strSQL += "SELECT DeptCode, DeptName FROM Department"
         rsDepartment.Open(strSQL, conDB, 1, 4)
 
         For i = 1 To rsDepartment.RecordCount

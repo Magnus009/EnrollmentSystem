@@ -110,6 +110,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Dsn=SHSEnrollmentSystem;uid=sa;pwd=81at84;database=SHSEnrollmentSystem.
+        '''</summary>
+        Friend ReadOnly Property ODBCConnection() As String
+            Get
+                Return ResourceManager.GetString("ODBCConnection", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property password() As System.Drawing.Bitmap

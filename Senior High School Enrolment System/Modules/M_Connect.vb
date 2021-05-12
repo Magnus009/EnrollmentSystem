@@ -1,4 +1,6 @@
-﻿Module M_Connect
+﻿Imports System.Data.Odbc
+
+Module M_Connect
     Public strQuery As String
     Public conDB As New ADODB.Connection
     Public rsDB As New ADODB.Recordset
@@ -32,4 +34,41 @@
         End Try
         Return dsReturn 'return mo na yung dataset
     End Function
+
+    Public Function SELECT_SHS(strQuery As String) As DataTable
+        Dim dtResult As New DataTable
+        Try
+            Dim odbcCon As New OdbcConnection(My.Resources.ODBCConnection) 'Connection
+            Dim odbcAdapter As New OdbcDataAdapter(strQuery, odbcCon) 'Holds data
+
+            odbcCon.Open() 'Open Connection
+            odbcAdapter.Fill(dtResult)
+            odbcCon.Close() 'Close Coonnection
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
+
+        Return dtResult
+    End Function
+
+    Public Function EXEC_SHS(strQuery As String) As Boolean
+        Dim blnExec As Boolean = False
+        Try
+            Dim odbcCon As New OdbcConnection(My.Resources.ODBCConnection) 'Connection
+            Dim odbcCMD As New OdbcCommand(strQuery, odbcCon) 'Command
+
+            'ExecuteNonQuery() = Execute command then return affected row(s)
+            odbcCon.Open()
+            If odbcCMD.ExecuteNonQuery().Equals(0) Then
+                blnExec = False
+            Else
+                blnExec = True
+            End If
+            odbcCon.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
+        Return blnExec
+    End Function
+
 End Module

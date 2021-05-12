@@ -2,6 +2,7 @@
     Public UserName As String
     Public UserLevelID As Integer
     Public UserLevel As String
+    Public strSQL As String
 
     Public Sub getUserLevel(intUserLevelID As Integer)
         Call SQLConnect()
@@ -22,8 +23,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Strand" & vbCrLf
-        strSQL = strSQL & "WHERE CourseName LIKE '%" & strStrandName & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Strand" & vbCrLf
+        strSQL += "WHERE CourseName LIKE '%" & strStrandName & "%'" & vbCrLf
         rsStrandCD.Open(strSQL, conDB, 1, 4)
 
         Return rsStrandCD.Fields(0).Value
@@ -49,8 +50,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Department " & vbCrLf
-        strSQL = strSQL & "WHERE DeptName LIKE '%" & strDeptName & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Department " & vbCrLf
+        strSQL += "WHERE DeptName LIKE '%" & strDeptName & "%'" & vbCrLf
         rsDeptCode.Open(strSQL, conDB, 1, 4)
 
         Return rsDeptCode.Fields(0).Value
@@ -62,8 +63,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Department " & vbCrLf
-        strSQL = strSQL & "WHERE DeptCode LIKE '%" & strDeptCode & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Department " & vbCrLf
+        strSQL += "WHERE DeptCode LIKE '%" & strDeptCode & "%'" & vbCrLf
         rsDeptName.Open(strSQL, conDB, 1, 4)
 
         Return rsDeptName.Fields(1).Value
@@ -76,7 +77,7 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT SubjectCode FROM Subject " & vbCrLf
-        strSQL = strSQL & "WHERE Description LIKE '%" & strSubDesp & "%'" & vbCrLf
+        strSQL += "WHERE Description LIKE '%" & strSubDesp & "%'" & vbCrLf
         rsSubjCode.Open(strSQL, conDB, 1, 4)
 
         Return rsSubjCode.Fields(0).Value
@@ -88,7 +89,7 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT Description FROM Subject " & vbCrLf
-        strSQL = strSQL & "WHERE SubjectCode LIKE '%" & strSubCode & "%'" & vbCrLf
+        strSQL += "WHERE SubjectCode LIKE '%" & strSubCode & "%'" & vbCrLf
         rsSubjName.Open(strSQL, conDB, 1, 4)
 
         Return rsSubjName.Fields(0).Value
@@ -102,7 +103,7 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT TeacherCode FROM Teachers " & vbCrLf
-        strSQL = strSQL & "WHERE LastName + ', ' + FirstName + ' ' +  MiddleName  LIKE '%" & RTrim(strTeacherName) & "%'" & vbCrLf
+        strSQL += "WHERE LastName + ', ' + FirstName + ' ' +  MiddleName  LIKE '%" & RTrim(strTeacherName) & "%'" & vbCrLf
         rsTeacherCode.Open(strSQL, conDB, 1, 4)
 
         Return rsTeacherCode.Fields(0).Value
@@ -116,7 +117,7 @@
 
         strSQL = vbNullString
         strSQL &= "SELECT LastName + ', ' + FirstName + ' ' +  MiddleName FROM Teachers  " & vbCrLf
-        strSQL = strSQL & "WHERE TeacherCode  LIKE '%" & strTeacherCode & "%'" & vbCrLf
+        strSQL += "WHERE TeacherCode  LIKE '%" & strTeacherCode & "%'" & vbCrLf
         rsTeacherName.Open(strSQL, conDB, 1, 4)
 
         Return rsTeacherName.Fields(0).Value
@@ -129,8 +130,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Strand" & vbCrLf
-        strSQL = strSQL & "WHERE CourseCode LIKE '%" & strStrandCode & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Strand" & vbCrLf
+        strSQL += "WHERE CourseCode LIKE '%" & strStrandCode & "%'" & vbCrLf
         rsStrand.Open(strSQL, conDB, 1, 4)
 
         Return rsStrand.Fields(1).Value
@@ -142,8 +143,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Sections" & vbCrLf
-        strSQL = strSQL & "WHERE SectionName LIKE '%" & strSectionName & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Sections" & vbCrLf
+        strSQL += "WHERE SectionName LIKE '%" & strSectionName & "%'" & vbCrLf
         rsSecCode.Open(strSQL, conDB, 1, 4)
 
         Return rsSecCode.Fields(0).Value
@@ -154,8 +155,8 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT * FROM Sections" & vbCrLf
-        strSQL = strSQL & "WHERE SectionCode LIKE '%" & strSectionCode & "%'" & vbCrLf
+        strSQL += "SELECT * FROM Sections" & vbCrLf
+        strSQL += "WHERE SectionCode LIKE '%" & strSectionCode & "%'" & vbCrLf
         rsSecName.Open(strSQL, conDB, 1, 4)
 
         Return rsSecName.Fields(3).Value
@@ -167,23 +168,19 @@
 
         Call SQLConnect()
         strSQL = vbNullString
-        strSQL = strSQL & "SELECT TypeID FROM StudentType" & vbCrLf
-        strSQL = strSQL & "WHERE Description LIKE '%" & strTypeCode & "%'" & vbCrLf
+        strSQL += "SELECT TypeID FROM StudentType" & vbCrLf
+        strSQL += "WHERE Description LIKE '%" & strTypeCode & "%'" & vbCrLf
         rsClass.Open(strSQL, conDB, 1, 4)
 
         Return rsClass.Fields(0).Value
     End Function
     Public Function getStudentClassType(strType As String) As String
-        Dim strSQL As String
-        Dim rsClassType As New ADODB.Recordset
+        Dim strStudType As String
+        strSQL = "SELECT Description FROM StudentType" & vbCrLf
+        strSQL += "WHERE TypeID LIKE '%" & strType & "%'" & vbCrLf
+        strStudType = SELECT_SHS(strSQL).Rows(0)(0)
 
-        Call SQLConnect()
-        strSQL = vbNullString
-        strSQL = strSQL & "SELECT Description FROM StudentType" & vbCrLf
-        strSQL = strSQL & "WHERE TypeID LIKE '%" & strType & "%'" & vbCrLf
-        rsClassType.Open(strSQL, conDB, 1, 4)
-
-        Return rsClassType.Fields(0).Value
+        Return strStudType
     End Function
     Public Function getTrackCode(strTrackName As String) As String
         Dim strSQL As String
@@ -192,7 +189,7 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT TrackID FROM Tracks  " & vbCrLf
-        strSQL = strSQL & "WHERE Track LIKE '%" & RTrim(strTrackName) & "%'" & vbCrLf
+        strSQL += "WHERE Track LIKE '%" & RTrim(strTrackName) & "%'" & vbCrLf
         rsTrackCode.Open(strSQL, conDB, 1, 4)
 
         Return rsTrackCode.Fields(0).Value
@@ -205,7 +202,7 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT Track FROM Tracks  " & vbCrLf
-        strSQL = strSQL & "WHERE TrackID LIKE '%" & RTrim(strTrackCode) & "%'" & vbCrLf
+        strSQL += "WHERE TrackID LIKE '%" & RTrim(strTrackCode) & "%'" & vbCrLf
         rsTrackName.Open(strSQL, conDB, 1, 4)
 
         Return rsTrackName.Fields(0).Value
@@ -218,8 +215,8 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT Code FROM Specialization" & vbCrLf
-        strSQL = strSQL & "WHERE Specialization LIKE '%" & RTrim(strSpecialName) & "%'" & vbCrLf
-        strSQL = strSQL & "AND CourseCode = '" & RTrim(strCourseCode) & "'" & vbCrLf
+        strSQL += "WHERE Specialization LIKE '%" & RTrim(strSpecialName) & "%'" & vbCrLf
+        strSQL += "AND CourseCode = '" & RTrim(strCourseCode) & "'" & vbCrLf
         rsSpecialCode.Open(strSQL, conDB, 1, 4)
 
         Return rsSpecialCode.Fields(0).Value
@@ -232,8 +229,8 @@
         Call SQLConnect()
         strSQL = vbNullString
         strSQL &= "SELECT Specialization FROM Specialization" & vbCrLf
-        strSQL = strSQL & "WHERE Code LIKE '%" & RTrim(strSpecialCode) & "%'" & vbCrLf
-        strSQL = strSQL & "AND CourseCode = '" & RTrim(strCourseCode) & "'" & vbCrLf
+        strSQL += "WHERE Code LIKE '%" & RTrim(strSpecialCode) & "%'" & vbCrLf
+        strSQL += "AND CourseCode = '" & RTrim(strCourseCode) & "'" & vbCrLf
         rsSpecialNAme.Open(strSQL, conDB, 1, 4)
 
         Return rsSpecialNAme.Fields(0).Value
@@ -247,73 +244,84 @@
         '//5=Logout
 
         Dim strSQL As String
-        Dim rsInsert As New ADODB.Recordset
+        Dim strAction As String
 
-
-        strSQL = vbNullString
         If intAction = 1 Then
-            strSQL &= "INSERT INTO AudtTrail " & vbCrLf
-            strSQL &= "VALUES ( " & vbCrLf
-            strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= ",'ADD'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
-            strSQL &= ",'" & strRemarks & "'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",Null" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+            strAction = "ADD"
         ElseIf intAction = 2 Then
-            strSQL &= "INSERT INTO AudtTrail " & vbCrLf
-            strSQL &= "VALUES ( " & vbCrLf
-            strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= ",'UPDATE'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
-            strSQL &= ",'" & strRemarks & "'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",Null" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+            strAction = "UPDATE"
         ElseIf intAction = 3 Then
-            strSQL &= "INSERT INTO AudtTrail " & vbCrLf
-            strSQL &= "VALUES ( " & vbCrLf
-            strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= ",'DELETE'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
-            strSQL &= ",'" & strRemarks & "'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",Null" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+            strAction = "DELETE"
         ElseIf intAction = 4 Then
-            strSQL &= "INSERT INTO AudtTrail " & vbCrLf
-            strSQL &= "VALUES ( " & vbCrLf
-            strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= ",'LOGIN'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
-            strSQL &= ",'" & strRemarks & "'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",Null" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+            strAction = "LOGIN"
         Else
-            strSQL &= "INSERT INTO AudtTrail " & vbCrLf
-            strSQL &= "VALUES ( " & vbCrLf
-            strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
-            strSQL &= ",'LOGOUT'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
-            strSQL &= ",'" & strRemarks & "'" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",Null" & vbCrLf
-            strSQL &= ",getDate()" & vbCrLf
-            strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+            strAction = "LOGOUT"
         End If
-        rsInsert.Open(strSQL, conDB, 1, 4)
 
+        strSQL = ""
+        strSQL &= "INSERT INTO AudtTrail " & vbCrLf
+        strSQL &= "VALUES ( " & vbCrLf
+        strSQL &= "'" & frm_Login.txtUserName.Text & "'" & vbCrLf
+        strSQL &= ",'" + strAction + "'" & vbCrLf
+        strSQL &= ",getDate()" & vbCrLf
+        strSQL &= ",'" & Format(Now, "HH:MM") & "'" & vbCrLf
+        strSQL &= ",'" & strRemarks & "'" & vbCrLf
+        strSQL &= ",getDate()" & vbCrLf
+        strSQL &= ",Null" & vbCrLf
+        strSQL &= ",getDate()" & vbCrLf
+        strSQL &= ",'" & frm_Login.txtUserName.Text & "')" & vbCrLf
+        EXEC_SHS(strSQL)
+      
     End Sub
 
+    Public Function checkRequire(container As Form) As Boolean
+        Dim blnReturn As Boolean
+        Try
+            For Each ctrl As Control In container.Controls
+                Select Case ctrl.GetType()
+                    Case GetType(TextBox)
+                        Dim txt As TextBox
+                        txt = ctrl
+                        If txt.Tag.ToString.Contains("*") Then
+                            If txt.Text = "" Then
+                                blnReturn = True
+                            End If
+                        End If
+                    Case GetType(ComboBox)
+                        Dim cbo As ComboBox
+                        cbo = ctrl
+                        If cbo.Tag.ToString.Contains("*") Then
+                            If cbo.SelectedValue = -1 Then
+                                blnReturn = True
+                            End If
+                        End If
+                End Select
+
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
+        Return blnReturn
+    End Function
+
+    Public Sub cboDataBind(cbo As ComboBox, strQuery As String, Optional strHeader As String = "--CHOOSE ITEM--")
+        Try
+            Dim dtItems As New DataTable
+            Dim dr As DataRow
+
+            dtItems = SELECT_SHS(strQuery)
+            dtItems.Columns(0).ColumnName = "ID"
+            dtItems.Columns(1).ColumnName = "Description"
+            dr = dtItems.NewRow
+            dr(0) = -1
+            dr(1) = strHeader
+
+            dtItems.Rows.InsertAt(dr, 0)
+            cbo.DataSource = dtItems
+            cbo.DisplayMember = "Description"
+            cbo.ValueMember = "ID"
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
 End Module
